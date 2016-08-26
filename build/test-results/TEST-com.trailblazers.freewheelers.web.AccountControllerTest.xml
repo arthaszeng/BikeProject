@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.trailblazers.freewheelers.web.AccountControllerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-08-26T09:42:32" hostname="CNcwzeng.local" time="0.596">
+  <properties/>
+  <testcase name="shouldShowTheCreateAccountForm" classname="com.trailblazers.freewheelers.web.AccountControllerTest" time="0.566"/>
+  <testcase name="shouldNotCallServiceWhenThereAreValidationErrors" classname="com.trailblazers.freewheelers.web.AccountControllerTest" time="0.021"/>
+  <testcase name="successfulAccountCreationShouldShowSuccess" classname="com.trailblazers.freewheelers.web.AccountControllerTest" time="0.002"/>
+  <testcase name="accountCreationExceptionShouldShowError" classname="com.trailblazers.freewheelers.web.AccountControllerTest" time="0.002"/>
+  <testcase name="shouldCreateAnAccountFromTheHttpRequest" classname="com.trailblazers.freewheelers.web.AccountControllerTest" time="0.003"/>
+  <testcase name="accountValidationFailureShouldShowError" classname="com.trailblazers.freewheelers.web.AccountControllerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+</testsuite>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.trailblazers.freewheelers.service.SurveyServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2016-08-26T09:42:32" hostname="CNcwzeng.local" time="0.261">
+  <properties/>
+  <testcase name="shouldFetchSurveyComments" classname="com.trailblazers.freewheelers.service.SurveyServiceTest" time="0.253"/>
+  <testcase name="shouldSaveSurveyResults" classname="com.trailblazers.freewheelers.service.SurveyServiceTest" time="0.004"/>
+  <testcase name="shouldFetchNpsReport" classname="com.trailblazers.freewheelers.service.SurveyServiceTest" time="0.002"/>
+  <testcase name="shouldDeleteAllSurveyEntries" classname="com.trailblazers.freewheelers.service.SurveyServiceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

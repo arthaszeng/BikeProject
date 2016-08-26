@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>AccountServiceImpl.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">twu51proj4</a> &gt; <a href="index.source.html" class="el_package">com.trailblazers.freewheelers.service.impl</a> &gt; <span class="el_source">AccountServiceImpl.java</span></div><h1>AccountServiceImpl.java</h1><pre class="source lang-java linenums">package com.trailblazers.freewheelers.service.impl;
+
+import com.trailblazers.freewheelers.mappers.AccountMapper;
+import com.trailblazers.freewheelers.mappers.AccountRoleMapper;
+import com.trailblazers.freewheelers.mappers.MyBatisUtil;
+import com.trailblazers.freewheelers.model.Account;
+import com.trailblazers.freewheelers.model.AccountRole;
+import com.trailblazers.freewheelers.service.AccountService;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class AccountServiceImpl implements AccountService {
+
+    public static final String USER = &quot;ROLE_USER&quot;;
+    private static final String ADMIN = &quot;ROLE_ADMIN&quot;;
+
+    private final AccountRoleMapper accountRoleMapper;
+    private SqlSession sqlSession;
+    private AccountMapper accountMapper;
+
+    public AccountServiceImpl() {
+<span class="fc" id="L25">        this(MyBatisUtil.getSqlSessionFactory().openSession());</span>
+<span class="fc" id="L26">    }</span>
+
+<span class="fc" id="L28">    public AccountServiceImpl(SqlSession sqlSession) {</span>
+<span class="fc" id="L29">        this.sqlSession= sqlSession;</span>
+<span class="fc" id="L30">        this.accountMapper = sqlSession.getMapper(AccountMapper.class);</span>
+<span class="fc" id="L31">        this.accountRoleMapper = sqlSession.getMapper(AccountRoleMapper.class);</span>
+<span class="fc" id="L32">    }</span>
+
+    @Override
+    public List&lt;Account&gt; findAll() {
+<span class="nc" id="L36">        return accountMapper.findAll();</span>
+    }
+
+    @Override
+    public Account getAccountIdByName(String userName) {
+<span class="nc" id="L41">        return accountMapper.getByName(userName);</span>
+    }
+
+    @Override
+    public Account get(Long account_id) {
+<span class="nc" id="L46">        return accountMapper.getById(account_id);</span>
+    }
+
+    @Override
+    public void delete(Account account) {
+<span class="nc" id="L51">        accountMapper.delete(account);</span>
+<span class="nc" id="L52">        sqlSession.commit();</span>
+<span class="nc" id="L53">    }</span>
+
+    @Override
+    public void createAdmin(Account account) {
+<span class="nc" id="L57">        create(account, ADMIN);</span>
+<span class="nc" id="L58">    }</span>
+
+    @Override
+    public Account createAccount(Account account) {
+<span class="fc" id="L62">        create(account, USER);</span>
+<span class="fc" id="L63">        return account;</span>
+    }
+
+    private void create(Account account, String role) {
+<span class="fc" id="L67">        accountMapper.insert(account);</span>
+<span class="fc" id="L68">        accountRoleMapper.insert(roleFor(account, role));</span>
+<span class="fc" id="L69">        sqlSession.commit();</span>
+<span class="fc" id="L70">    }</span>
+
+    private AccountRole roleFor(Account account, String role) {
+<span class="fc" id="L73">        return new AccountRole()</span>
+                .setAccount_name(account.getAccount_name())
+                .setRole(role);
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.1.201405082137</span></div></body></html>

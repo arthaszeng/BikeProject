@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.trailblazers.freewheelers.persistence.persistence.ReserveOrderMapperTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-08-26T09:42:38" hostname="CNcwzeng.local" time="0.052">
+  <properties/>
+  <testcase name="shouldFindAllOrders" classname="com.trailblazers.freewheelers.persistence.persistence.ReserveOrderMapperTest" time="0.012"/>
+  <testcase name="shouldFindAllOrdersForAnAccount" classname="com.trailblazers.freewheelers.persistence.persistence.ReserveOrderMapperTest" time="0.014"/>
+  <testcase name="shouldUpdateAnOrder" classname="com.trailblazers.freewheelers.persistence.persistence.ReserveOrderMapperTest" time="0.01"/>
+  <testcase name="shouldDeleteAnOrder" classname="com.trailblazers.freewheelers.persistence.persistence.ReserveOrderMapperTest" time="0.007"/>
+  <testcase name="shouldInsertAndGetAnOrder" classname="com.trailblazers.freewheelers.persistence.persistence.ReserveOrderMapperTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.trailblazers.freewheelers.model.AccountValidatorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-08-26T09:42:31" hostname="CNcwzeng.local" time="0.006">
+  <properties/>
+  <testcase name="shouldComplainAboutAnEmptyPassword" classname="com.trailblazers.freewheelers.model.AccountValidatorTest" time="0.004"/>
+  <testcase name="shouldComplainAboutAnEmptyName" classname="com.trailblazers.freewheelers.model.AccountValidatorTest" time="0.0"/>
+  <testcase name="shouldComplainAboutAnEmptyPhoneNumber" classname="com.trailblazers.freewheelers.model.AccountValidatorTest" time="0.0"/>
+  <testcase name="shouldHaveNoErrorsForValidInput" classname="com.trailblazers.freewheelers.model.AccountValidatorTest" time="0.0"/>
+  <testcase name="shouldComplainAboutAnInvalidEmail" classname="com.trailblazers.freewheelers.model.AccountValidatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.trailblazers.freewheelers.service.impl.AccountServiceImplTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-08-26T09:42:32" hostname="CNcwzeng.local" time="0.016">
+  <properties/>
+  <testcase name="shouldCreateAccountWhenThereAreNoValidationErrors" classname="com.trailblazers.freewheelers.service.impl.AccountServiceImplTest" time="0.016"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

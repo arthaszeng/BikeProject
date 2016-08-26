@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.trailblazers.freewheelers.web.SurveyControllerTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-08-26T09:42:32" hostname="CNcwzeng.local" time="0.038">
+  <properties/>
+  <testcase name="shouldAddANpsReportToTheReport" classname="com.trailblazers.freewheelers.web.SurveyControllerTest" time="0.001"/>
+  <testcase name="shouldReturnToTheFormPageWhenSurveyEntryFormIsInvalid" classname="com.trailblazers.freewheelers.web.SurveyControllerTest" time="0.015"/>
+  <testcase name="shouldSetCookie" classname="com.trailblazers.freewheelers.web.SurveyControllerTest" time="0.007"/>
+  <testcase name="shouldReturnSurveyReportViewName" classname="com.trailblazers.freewheelers.web.SurveyControllerTest" time="0.001"/>
+  <testcase name="shouldHaveMandatoryFieldErrorIfSurveyRatingIsInvalid" classname="com.trailblazers.freewheelers.web.SurveyControllerTest" time="0.001"/>
+  <testcase name="shouldNotCallValidationServiceWhenThereAreFormErrors" classname="com.trailblazers.freewheelers.web.SurveyControllerTest" time="0.001"/>
+  <testcase name="shouldAddASurveyCommentsToTheReport" classname="com.trailblazers.freewheelers.web.SurveyControllerTest" time="0.0"/>
+  <testcase name="shouldSubmitSurveyForUserIfThereIsNoBindingError" classname="com.trailblazers.freewheelers.web.SurveyControllerTest" time="0.001"/>
+  <testcase name="shouldReturnFormViewName" classname="com.trailblazers.freewheelers.web.SurveyControllerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

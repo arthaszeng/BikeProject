@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.trailblazers.freewheelers.persistence.persistence.SurveyMapperTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2016-08-26T09:42:38" hostname="CNcwzeng.local" time="0.097">
+  <properties/>
+  <testcase name="shouldNotReturnEmptyPassiveComments" classname="com.trailblazers.freewheelers.persistence.persistence.SurveyMapperTest" time="0.017"/>
+  <testcase name="shouldNotReturnEmptyDetractorComments" classname="com.trailblazers.freewheelers.persistence.persistence.SurveyMapperTest" time="0.01"/>
+  <testcase name="shouldGenerateEmptyReport" classname="com.trailblazers.freewheelers.persistence.persistence.SurveyMapperTest" time="0.007"/>
+  <testcase name="shouldDeleteAllEntries" classname="com.trailblazers.freewheelers.persistence.persistence.SurveyMapperTest" time="0.007"/>
+  <testcase name="shouldReturnDetractorComments" classname="com.trailblazers.freewheelers.persistence.persistence.SurveyMapperTest" time="0.009"/>
+  <testcase name="shouldNotReturnEmptyPromoterComments" classname="com.trailblazers.freewheelers.persistence.persistence.SurveyMapperTest" time="0.007"/>
+  <testcase name="shouldGenerateReport" classname="com.trailblazers.freewheelers.persistence.persistence.SurveyMapperTest" time="0.015"/>
+  <testcase name="shouldReturnPromoterComments" classname="com.trailblazers.freewheelers.persistence.persistence.SurveyMapperTest" time="0.01"/>
+  <testcase name="shouldInsertAndGetAccount" classname="com.trailblazers.freewheelers.persistence.persistence.SurveyMapperTest" time="0.006"/>
+  <testcase name="shouldReturnPassiveComments" classname="com.trailblazers.freewheelers.persistence.persistence.SurveyMapperTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

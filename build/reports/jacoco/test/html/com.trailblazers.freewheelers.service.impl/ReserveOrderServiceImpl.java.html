@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>ReserveOrderServiceImpl.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">twu51proj4</a> &gt; <a href="index.source.html" class="el_package">com.trailblazers.freewheelers.service.impl</a> &gt; <span class="el_source">ReserveOrderServiceImpl.java</span></div><h1>ReserveOrderServiceImpl.java</h1><pre class="source lang-java linenums">package com.trailblazers.freewheelers.service.impl;
+
+import com.trailblazers.freewheelers.mappers.MyBatisUtil;
+import com.trailblazers.freewheelers.mappers.ReserveOrderMapper;
+import com.trailblazers.freewheelers.model.OrderStatus;
+import com.trailblazers.freewheelers.model.ReserveOrder;
+import com.trailblazers.freewheelers.service.ReserveOrderService;
+import org.apache.ibatis.session.SqlSession;
+
+import java.util.List;
+
+public class ReserveOrderServiceImpl implements ReserveOrderService{
+
+    private final SqlSession sqlSession;
+    private final ReserveOrderMapper orderMapper;
+
+<span class="nc" id="L17">    public ReserveOrderServiceImpl() {</span>
+<span class="nc" id="L18">        sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();</span>
+<span class="nc" id="L19">        orderMapper = sqlSession.getMapper(ReserveOrderMapper.class);</span>
+<span class="nc" id="L20">    }</span>
+
+    public void save(ReserveOrder reserveOrder) {
+<span class="nc bnc" id="L23" title="All 2 branches missed.">        if(reserveOrder.getOrder_id() == null) {</span>
+<span class="nc" id="L24">            orderMapper.insert(reserveOrder);</span>
+        } else {
+<span class="nc" id="L26">            orderMapper.save(reserveOrder);</span>
+        }
+<span class="nc" id="L28">        sqlSession.commit();</span>
+<span class="nc" id="L29">    }</span>
+
+    public List&lt;ReserveOrder&gt; findAllOrdersByAccountId(Long account_id) {
+<span class="nc" id="L32">        sqlSession.clearCache();</span>
+<span class="nc" id="L33">        return orderMapper.findAllFor(account_id);</span>
+    }
+
+    public List&lt;ReserveOrder&gt; getAllOrdersByAccount() {
+<span class="nc" id="L37">        sqlSession.clearCache();</span>
+<span class="nc" id="L38">        return orderMapper.findAll();</span>
+    }
+
+    public void updateOrderDetails(Long order_id, OrderStatus status, String note) {
+<span class="nc" id="L42">        ReserveOrder order = orderMapper.get(order_id);</span>
+
+<span class="nc" id="L44">        order.setStatus(status);</span>
+<span class="nc" id="L45">        order.setNote(note);</span>
+
+<span class="nc" id="L47">        orderMapper.save(order);</span>
+<span class="nc" id="L48">        sqlSession.commit();</span>
+<span class="nc" id="L49">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.1.201405082137</span></div></body></html>

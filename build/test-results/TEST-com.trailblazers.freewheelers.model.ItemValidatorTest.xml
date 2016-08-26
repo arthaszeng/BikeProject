@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.trailblazers.freewheelers.model.ItemValidatorTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-08-26T09:42:31" hostname="CNcwzeng.local" time="0.008">
+  <properties/>
+  <testcase name="shouldErrorWhenThereIsNoPrice" classname="com.trailblazers.freewheelers.model.ItemValidatorTest" time="0.005"/>
+  <testcase name="shouldErrorWhenThereIsNoName" classname="com.trailblazers.freewheelers.model.ItemValidatorTest" time="0.0"/>
+  <testcase name="shouldErrorWhenThereIsNoType" classname="com.trailblazers.freewheelers.model.ItemValidatorTest" time="0.0"/>
+  <testcase name="shouldHaveNoValidationErrorsForAValidItem" classname="com.trailblazers.freewheelers.model.ItemValidatorTest" time="0.0"/>
+  <testcase name="should" classname="com.trailblazers.freewheelers.model.ItemValidatorTest" time="0.0"/>
+  <testcase name="shouldErrorWhenThereIsNoDescription" classname="com.trailblazers.freewheelers.model.ItemValidatorTest" time="0.0"/>
+  <testcase name="shouldErrorWhenThereIsNoQuantity" classname="com.trailblazers.freewheelers.model.ItemValidatorTest" time="0.0"/>
+  <testcase name="shouldHaveAPrice" classname="com.trailblazers.freewheelers.model.ItemValidatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

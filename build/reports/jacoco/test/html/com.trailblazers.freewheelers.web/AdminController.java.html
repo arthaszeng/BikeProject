@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>AdminController.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">twu51proj4</a> &gt; <a href="index.source.html" class="el_package">com.trailblazers.freewheelers.web</a> &gt; <span class="el_source">AdminController.java</span></div><h1>AdminController.java</h1><pre class="source lang-java linenums">package com.trailblazers.freewheelers.web;
+
+import com.trailblazers.freewheelers.model.Account;
+import com.trailblazers.freewheelers.model.Item;
+import com.trailblazers.freewheelers.model.OrderStatus;
+import com.trailblazers.freewheelers.model.ReserveOrder;
+import com.trailblazers.freewheelers.service.AccountService;
+import com.trailblazers.freewheelers.service.ItemService;
+import com.trailblazers.freewheelers.service.ReserveOrderService;
+import com.trailblazers.freewheelers.service.impl.AccountServiceImpl;
+import com.trailblazers.freewheelers.service.impl.ItemServiceImpl;
+import com.trailblazers.freewheelers.service.impl.ReserveOrderServiceImpl;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static java.lang.Long.valueOf;
+
+@Controller
+<span class="nc" id="L24">public class AdminController {</span>
+
+    static final String URL = &quot;/admin&quot;;
+
+<span class="nc" id="L28">    ReserveOrderService reserveOrderService = new ReserveOrderServiceImpl();</span>
+
+<span class="nc" id="L30">    ItemService itemService = new ItemServiceImpl();</span>
+<span class="nc" id="L31">    AccountService accountService = new AccountServiceImpl();</span>
+
+    @RequestMapping(value=&quot;/admin&quot;, method = RequestMethod.GET)
+    public void get(Model model) {
+<span class="nc" id="L35">        model.addAttribute(&quot;reserveOrders&quot;, getAllOrders());</span>
+<span class="nc" id="L36">    }</span>
+
+    @RequestMapping(value = &quot;/admin&quot;, method = RequestMethod.POST, params=&quot;save=Save Changes&quot;)
+    public void updateOrder(Model model, String state, String orderId, String note) {
+<span class="nc" id="L40">        Long order_id = valueOf(orderId);</span>
+<span class="nc" id="L41">        OrderStatus status = OrderStatus.valueOf(state);</span>
+<span class="nc" id="L42">        reserveOrderService.updateOrderDetails(order_id, status, note);</span>
+<span class="nc" id="L43">        get(model);</span>
+<span class="nc" id="L44">    }</span>
+
+    protected List&lt;ReservedOrderDetail&gt; getAllOrders() {
+<span class="nc" id="L47">        List&lt;ReserveOrder&gt; reserveOrders = reserveOrderService.getAllOrdersByAccount();</span>
+
+<span class="nc" id="L49">        List&lt;ReservedOrderDetail&gt; reservedOrderDetails = new ArrayList&lt;ReservedOrderDetail&gt;();</span>
+
+<span class="nc bnc" id="L51" title="All 2 branches missed.">        for (ReserveOrder reserveOrder: reserveOrders){</span>
+<span class="nc" id="L52">            Account account = accountService.get(reserveOrder.getAccount_id());</span>
+<span class="nc" id="L53">            Item item = itemService.get(reserveOrder.getItem_id());</span>
+
+<span class="nc" id="L55">            reservedOrderDetails.add(new ReservedOrderDetail(reserveOrder.getOrder_id(),</span>
+                                                             account,
+                                                             item,
+                                                             reserveOrder.getReservation_timestamp(),
+                                                             reserveOrder.getStatus(),
+                                                             reserveOrder.getNote()));
+
+<span class="nc" id="L62">        }</span>
+<span class="nc" id="L63">        return reservedOrderDetails;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.1.201405082137</span></div></body></html>

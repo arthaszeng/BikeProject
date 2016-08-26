@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.trailblazers.freewheelers.web.ItemControllerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-08-26T09:42:32" hostname="CNcwzeng.local" time="0.014">
+  <properties/>
+  <testcase name="shouldRenderItemListView" classname="com.trailblazers.freewheelers.web.ItemControllerTest" time="0.009"/>
+  <testcase name="shouldDisplayErrorsIfValidationFailed" classname="com.trailblazers.freewheelers.web.ItemControllerTest" time="0.001"/>
+  <testcase name="shouldNotCallServiceWhenValidationFailed" classname="com.trailblazers.freewheelers.web.ItemControllerTest" time="0.001"/>
+  <testcase name="shouldDisplayItemsAfterSavingGivenItem" classname="com.trailblazers.freewheelers.web.ItemControllerTest" time="0.001"/>
+  <testcase name="shouldReturnItemsForDisplay" classname="com.trailblazers.freewheelers.web.ItemControllerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.trailblazers.freewheelers.persistence.persistence.AccountMapperTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-08-26T09:42:37" hostname="CNcwzeng.local" time="0.761">
+  <properties/>
+  <testcase name="shouldFindAllAccounts" classname="com.trailblazers.freewheelers.persistence.persistence.AccountMapperTest" time="0.718"/>
+  <testcase name="shouldGetAccountByName" classname="com.trailblazers.freewheelers.persistence.persistence.AccountMapperTest" time="0.01"/>
+  <testcase name="shouldReturnNullIfAnAccountDoesNotExist" classname="com.trailblazers.freewheelers.persistence.persistence.AccountMapperTest" time="0.008"/>
+  <testcase name="shouldUpdateAnExistingAccount" classname="com.trailblazers.freewheelers.persistence.persistence.AccountMapperTest" time="0.008"/>
+  <testcase name="shouldDeleteAccount" classname="com.trailblazers.freewheelers.persistence.persistence.AccountMapperTest" time="0.007"/>
+  <testcase name="shouldInsertAndGetAccount" classname="com.trailblazers.freewheelers.persistence.persistence.AccountMapperTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+</testsuite>
